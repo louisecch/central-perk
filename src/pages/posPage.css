@@ -422,6 +422,11 @@ td {
   text-align: center;
 }
 
+.table tbody tr td:nth-child(2),
+.table thead tr td:nth-child(2) {
+  text-align: left;
+}
+
 span {
   color: #b7b7b7;
 }
