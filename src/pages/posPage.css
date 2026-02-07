@@ -347,11 +347,13 @@
 }
 
 .container {
-  margin-top: 3rem;
+  margin-top: 0;
+  padding-top: 0;
 }
 
 .container-calculator {
   margin-left: 3rem;
+  margin-top: 0;
   padding-left: 1.3rem;
   padding-right: 1.3rem;
   padding-top: 1.3rem;
