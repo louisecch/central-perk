@@ -99,8 +99,12 @@
   }
 
   .col-lg-4:not(.col-lg-8 .col-lg-4) {
+    position: sticky !important;
+    top: 70px !important;
     flex: 0 0 50% !important;
     max-width: 50% !important;
+    height: fit-content !important;
+    align-self: flex-start !important;
   }
 
   .col-lg-8 .row .col-lg-4 {
