@@ -40,7 +40,7 @@ function HomePage() {
   return (
     <MainLayout>
       <div className="container-main">
-        <div className="bg-black p-5 m-5 rounded-3">
+        <div className="bg-black rounded-3">
           <p className="pos-desc-1">
             Built for cafes.
             <br />

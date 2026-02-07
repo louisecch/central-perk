@@ -343,7 +343,7 @@
 }
 
 .navbar-brand.adjusted {
-  margin-left: -4.9rem;
+  margin-left: 1rem;
 }
 
 .container {
@@ -462,6 +462,8 @@ h5 {
   font-family: "Sohne", Helvetica, sans-serif;
   color: white;
   padding-bottom: 0.3rem;
+  display: inline-block;
+  vertical-align: top;
 }
 
 .total-amount {

@@ -202,6 +202,7 @@ h5 {
 .container {
   display: flex;
   flex-wrap: wrap;
+  padding-left: 1rem;
 }
 
 .container.hero {
