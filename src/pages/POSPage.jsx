@@ -178,7 +178,7 @@ function POSPage() {
                     className="pos-item px-3 text-center"
                     onClick={() => addProductToCart(product)}
                   >
-                    <h5 className="pt-3">{product.name}</h5>
+                    <h5>{product.name}</h5>
                     <img
                       src={product.image}
                       className={`img-fluid rounded ${
