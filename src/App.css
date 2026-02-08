@@ -9,19 +9,6 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .toastify {
-    max-width: 80%;
-    margin: 0 auto;
-  }
-}
-
 @font-face {
   font-family: "Sohne";
   src: url("./fonts/Sohne-Buch.otf") format("opentype");
@@ -115,5 +102,18 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .toastify {
+    max-width: 80%;
+    margin: 0 auto;
   }
 }
