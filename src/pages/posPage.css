@@ -57,8 +57,8 @@
 }
 
 .container-calculator {
-  margin-left: 0.75rem;
-  margin-right: 0.75rem;
+  margin-left: 1rem;
+  margin-right: 0;
   margin-top: 0;
   padding: 1.5rem;
   background: #000000;
@@ -161,8 +161,8 @@
   border: none;
   cursor: pointer;
   padding: 0.875rem 1rem;
-  background-color: white;
-  color: #1d1d1f;
+  background-color: #3a3a3c;
+  color: #f5f5f7;
   margin-bottom: 0.5rem;
   border-radius: 12px;
   font-size: 0.9375rem;
@@ -170,23 +170,23 @@
   letter-spacing: -0.01em;
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 
-    0 1px 3px rgba(0, 0, 0, 0.08),
-    0 1px 2px rgba(0, 0, 0, 0.06);
+    0 1px 3px rgba(0, 0, 0, 0.3),
+    0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .btn-print:hover {
-  background-color: #000000;
+  background-color: #48484a;
   color: white;
   transform: translateY(-1px);
   box-shadow: 
-    0 4px 8px rgba(0, 0, 0, 0.12),
-    0 2px 4px rgba(0, 0, 0, 0.08);
+    0 4px 8px rgba(0, 0, 0, 0.4),
+    0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .btn-print:active {
   transform: translateY(0);
   box-shadow: 
-    0 1px 2px rgba(0, 0, 0, 0.08);
+    0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 td {
@@ -254,7 +254,7 @@ h5 {
   margin-bottom: 1.5rem;
   color: #f5f5f7;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: -0.02em;
 }
 
