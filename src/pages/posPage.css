@@ -6,12 +6,16 @@
 }
 
 .navbar-brand.adjusted {
-  margin-left: 1rem;
+  margin-left: 0;
 }
 
 .container {
   margin-top: 0;
   padding-top: 0;
+}
+
+.col-lg-8 {
+  padding-left: 0;
 }
 
 .container-calculator {
