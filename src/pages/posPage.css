@@ -111,6 +111,9 @@
   border-radius: 12px;
   overflow: hidden;
   background-color: #1c1c1e;
+}
+
+.cart-table {
   box-shadow:
     0 1px 3px rgba(0, 0, 0, 0.3),
     0 1px 2px rgba(0, 0, 0, 0.2);
@@ -338,10 +341,42 @@ h5 {
 
 .receipt-container {
   padding: 2rem;
+  font-family: 'Courier New', Courier, monospace;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 .receipt-table {
   background-color: #fff;
+  font-family: 'Courier New', Courier, monospace;
+  border-collapse: collapse;
+  font-size: 11px;
+}
+
+.receipt-heading {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.receipt-subheading td {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  border-bottom: 1px solid #333;
+  padding: 8px 4px;
+  color: #333;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.receipt-table tbody td {
+  font-family: 'Courier New', Courier, monospace;
+  padding: 6px 4px;
+  color: #000;
+  font-size: 11px;
+  border-bottom: none;
 }
 
 .receipt-spacer td {
