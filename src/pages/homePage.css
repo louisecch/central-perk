@@ -23,7 +23,7 @@ h5 {
 
 .pos-desc-1 {
   font-family: "Sohne Bold", Arial, Helvetica, sans-serif;
-  font-weight: normal !important;
+  font-weight: normal;
   font-size: 4.2rem;
   line-height: 98%;
   letter-spacing: 0.05rem;
@@ -39,16 +39,24 @@ h5 {
   margin-top: -1rem;
 }
 
-.btn {
+.hero-cta {
   border: none;
   color: white;
   font-weight: 600;
-  float: left;
+  display: inline-block;
   margin-top: 0.5rem;
+  text-decoration: none;
 }
 
-.btn:hover {
-  border: none !important;
+.hero-cta h2 {
+  margin-left: 0;
+  padding-left: 0;
+  padding-top: 0.5rem;
+  padding-right: 0.3rem;
+}
+
+.hero-cta:hover {
+  border: none;
   /* background-color: white; */
   /* color: rgb(23, 23, 23); */
   color: #6a6c6e;
@@ -91,66 +99,67 @@ h5 {
   }
 }
 
-.container {
+.layout-hero {
   display: flex;
   flex-wrap: wrap;
   padding-left: 1rem;
-}
-
-.container.hero {
   margin-top: 0;
-  display: flex;
   align-items: center;
   min-height: 100vh;
 }
 
+.hero-card {
+  background-color: #000;
+  border-radius: 1rem;
+}
+
 @media screen and (max-width: 1080px) {
   .container-main {
-    top: 0% !important;
+    top: 0%;
   }
   .pos-desc-1 {
-    width: 60vw !important;
-    height: 15rem !important;
+    width: 60vw;
+    height: 15rem;
   }
 }
 
 @media screen and (max-width: 850px) {
   .container-main {
-    top: 2% !important;
+    top: 2%;
   }
 
   .pos-desc-1,
   .contact-text {
-    width: 55vw !important;
-    font-size: 3.2rem !important;
+    width: 55vw;
+    font-size: 3.2rem;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .navbar-brand {
-    padding-left: 8.6rem !important;
+  .site-navbar-brand {
+    padding-left: 8.6rem;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .navbar-brand {
-    display: none !important;
+  .site-navbar-brand {
+    display: none;
   }
 }
 
 @media screen and (max-width: 600px) {
   .container-main {
-    top: 9% !important;
+    top: 9%;
   }
 
   .pos-desc-1,
   .contact-text {
-    font-size: 2.6rem !important ;
+    font-size: 2.6rem ;
   }
 
   div {
-    padding-left: 0rem !important;
-    padding-right: 0rem !important;
+    padding-left: 0rem;
+    padding-right: 0rem;
   }
 }
 
@@ -168,7 +177,7 @@ h5 {
     display: none;
   }
 
-  .container {
+  .layout-hero {
     margin: 0;
   }
 
@@ -189,11 +198,6 @@ h5 {
 
   .pos-desc-2 {
     margin-top: 0rem;
-  }
-
-  .row {
-    width: 99%;
-    margin-left: 0.18rem;
   }
 
   .start-btn {

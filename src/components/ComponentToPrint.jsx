@@ -5,10 +5,10 @@ export const ComponentToPrint = React.forwardRef((props, ref) => {
   return (
     <div
       ref={ref}
-      className="p-5"
+      className="receipt-container"
       style={{ backgroundColor: "white", color: "black" }}
     >
-      <table className="table">
+      <table className="receipt-table">
         <thead>
           <tr className="receipt-heading">
             <th colspan="5">Central Perk</th>

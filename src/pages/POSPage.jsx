@@ -8,9 +8,11 @@ import "./posPage.css";
 
 // Helper function to detect mobile devices
 const isMobileDevice = () => {
-  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-    navigator.userAgent
-  ) || window.innerWidth <= 768;
+  return (
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent,
+    ) || window.innerWidth <= 768
+  );
 };
 
 const toastOptions = {
@@ -31,10 +33,10 @@ function POSPage() {
     setIsLoading(true);
     try {
       const result = await axios.get(
-        "https://my-json-server.typicode.com/louisecchan/cafe-pos-json/products"
+        "https://my-json-server.typicode.com/louisecchan/cafe-pos-json/products",
       );
       setProducts(result.data);
-      
+
       // Preload images
       result.data.forEach((product) => {
         const img = new Image();
@@ -66,7 +68,7 @@ function POSPage() {
             ...cartItem,
             quantity: cartItem.quantity + 1,
             totalAmount: Number(
-              (Number(cartItem.price) * (cartItem.quantity + 1)).toFixed(2)
+              (Number(cartItem.price) * (cartItem.quantity + 1)).toFixed(2),
             ),
           };
           newCart.push(newItem);
@@ -81,7 +83,7 @@ function POSPage() {
           Added <span className="toast-product-name">{product.name}</span> to
           cart
         </>,
-        toastOptions
+        toastOptions,
       );
     } else {
       let addingProduct = {
@@ -95,7 +97,7 @@ function POSPage() {
           Added <span className="toast-product-name">{product.name}</span> to
           cart
         </>,
-        toastOptions
+        toastOptions,
       );
     }
   };
@@ -164,36 +166,38 @@ function POSPage() {
         </div>
       )}
 
-      <div className="row">
-        <div className="col-lg-8">
+      <div className="pos-layout">
+        <div className="pos-products">
           {isLoading ? (
             <div className="loading-spinner-container">
               <div className="loading-spinner"></div>
             </div>
           ) : (
-            <div className="row">
+            <div className="pos-products-grid">
               {products.map((product, key) => (
-                <div key={key} className="col-lg-4 mb-2">
+                <div key={key} className="pos-product-card">
                   <div
-                    className="pos-item px-3 text-center"
+                    className="pos-item"
                     onClick={() => addProductToCart(product)}
                   >
                     <h5>{product.name}</h5>
                     <img
                       src={product.image}
-                      className={`img-fluid rounded ${
-                        loadedImages.has(product.image) ? "image-loaded" : "image-loading"
+                      className={`pos-item-image ${
+                        loadedImages.has(product.image)
+                          ? "image-loaded"
+                          : "image-loading"
                       }`}
                       alt={product.name}
                     />
-                    <p className="p-3">${product.price}</p>
+                    <p className="pos-price">${product.price}</p>
                   </div>
                 </div>
               ))}
             </div>
           )}
         </div>
-        <div className="col-lg-4">
+        <div className="calculator-wrapper">
           <div style={{ display: "none" }}>
             <ComponentToPrint
               cart={cart}
@@ -201,12 +205,11 @@ function POSPage() {
               ref={componentRef}
             />
           </div>
-          <div className="calculator container">
-            <div className="bg-dark rounded container-calculator">
-              <table className="table table-light rounded">
-                <thead className="thead-dark cart-header">
+          <div className="calculator-panel">
+            <div className="container-calculator">
+              <table className="cart-table">
+                <thead className="cart-header">
                   <tr>
-                    <td className="cart-title">&nbsp;#</td>
                     <td className="cart-title">Name</td>
                     <td className="cart-title">Price</td>
                     <td className="cart-title">Qty</td>
@@ -218,14 +221,13 @@ function POSPage() {
                   {cart
                     ? cart.map((cartProduct, key) => (
                         <tr key={key}>
-                          <td className="table-head">{cartProduct.id}</td>
                           <td>{cartProduct.name}</td>
                           <td>{cartProduct.price}</td>
                           <td>{cartProduct.quantity}</td>
                           <td>{cartProduct.totalAmount}</td>
                           <td>
                             <button
-                              className="btn btn-danger btn-sm"
+                              className="btn-danger btn-danger-small"
                               onClick={() => removeProduct(cartProduct)}
                             >
                               Remove
@@ -237,7 +239,7 @@ function POSPage() {
                 </tbody>
               </table>
 
-              <h6 className="total-amount text-white">
+              <h6 className="total-amount">
                 Total Amount: ${totalAmount}
               </h6>
 
@@ -245,10 +247,7 @@ function POSPage() {
                 <div className="btn-print-container">
                   {totalAmount !== 0 ? (
                     <div>
-                      <button
-                        className="btn-print rounded"
-                        onClick={handlePrint}
-                      >
+                      <button className="btn-print" onClick={handlePrint}>
                         Print Receipt
                       </button>
                     </div>

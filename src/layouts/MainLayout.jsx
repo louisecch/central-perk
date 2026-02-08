@@ -7,13 +7,15 @@ function MainLayout({ children }) {
   const location = useLocation();
 
   const navbarBrandClass =
-    location.pathname === "/" ? "navbar-brand" : "navbar-brand adjusted";
+    location.pathname === "/"
+      ? "site-navbar-brand"
+      : "site-navbar-brand adjusted";
 
   return (
     <div>
       <header>
-        <nav className="navbar">
-          <div className="container">
+        <nav className="site-navbar">
+          <div className="site-nav-inner">
             <Link to="/" className={navbarBrandClass}>
               Central Perk
             </Link>
@@ -21,7 +23,7 @@ function MainLayout({ children }) {
         </nav>
       </header>
       <main>
-        <div className="container hero">{children}</div>
+        <div className="layout-hero">{children}</div>
         <ToastContainer hideProgressBar={true} />
       </main>
     </div>

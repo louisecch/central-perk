@@ -40,7 +40,7 @@ function HomePage() {
   return (
     <MainLayout>
       <div className="container-main">
-        <div className="bg-black rounded-3">
+        <div className="hero-card">
           <p className="pos-desc-1">
             Built for cafes.
             <br />
@@ -51,7 +51,10 @@ function HomePage() {
           </p>
           <br />
           <div className="start-btn">
-            <Link to="/pos" className="btn fadeInUp animated animatedFadeInUp">
+            <Link
+              to="/pos"
+              className="hero-cta fadeInUp animated animatedFadeInUp"
+            >
               <h2>Get Started</h2>
             </Link>
           </div>

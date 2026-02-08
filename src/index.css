@@ -17,19 +17,26 @@ table {
   border-radius: 15px;
 }
 
-.navbar {
+.site-navbar {
   background-color: black;
+  position: relative;
+  z-index: 1000;
 }
 
-.navbar-brand {
+.site-navbar-brand {
   margin-bottom: 1rem;
   padding-top: 2rem;
   font-size: 1rem;
   color: #f7f7f7;
+  text-decoration: none;
+  display: inline-block;
+  pointer-events: auto;
+  cursor: pointer;
 }
 
-.navbar-brand:hover {
+.site-navbar-brand:hover {
   color: grey;
+  text-decoration: none;
 }
 
 .pos-item {
@@ -74,9 +81,29 @@ table {
   font-family: "Sohne";
 }
 
+.site-nav-inner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.layout-hero {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
 @media screen and (max-width: 480px) {
-  .navbar-brand {
+  .site-navbar-brand {
     margin-top: 1rem;
     font-size: 1rem;
+  }
+
+  .site-nav-inner,
+  .layout-hero {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
