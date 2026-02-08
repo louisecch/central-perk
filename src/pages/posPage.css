@@ -829,8 +829,8 @@ h5 {
     vertical-align: middle;
   }
 
-  .cart-table thead tr td:nth-child(3),
-  .cart-table tbody tr td:nth-child(3) {
+  .cart-table thead tr td:nth-child(4),
+  .cart-table tbody tr td:nth-child(4) {
     display: none;
   }
 }
